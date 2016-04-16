@@ -28,7 +28,8 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
   },
   "main": "app.js",
   "repository": {
@@ -36,5 +37,8 @@
     "url": "git://github.com/sarahallen/sails-passport-example.git"
   },
   "author": "sarahallen",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "sails-memory": "^0.10.6"
+  }
 }
