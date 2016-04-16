@@ -9,6 +9,7 @@ $ node --version
 v4.2.2
 $ sails new sails-passport-example
 $ cd sails-passport-example
+npm install passport passport-local bcrypt --save
 ```
 
 
