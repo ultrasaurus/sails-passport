@@ -47,5 +47,24 @@ module.exports = {
   logout: function (req, res) {
     delete req.logout();
     res.json({success: true})
+  },
+
+  provider: function (req, res, next) {
+    sails.log.verbose('provider:', req.param('provider') );
+    passport.authenticate('google', { scope :
+      [ 'https://www.googleapis.com/auth/userinfo.email',
+        'https://www.googleapis.com/auth/userinfo.profile'],
+        accessType: 'online',
+        approval_prompt: 'auto'
+    })(req, res, next);
+  },
+
+  callback: function (req, res, next) {
+    sails.log.verbose('callback (provider action):', req.param('provider'), req.param('action')  );
+
+    passport.authenticate( 'google', {
+        successRedirect: '/',
+        failureRedirect: '/error'
+    })(req, res, next);
   }
 }

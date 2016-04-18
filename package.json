@@ -21,6 +21,7 @@
     "grunt-sync": "0.2.4",
     "include-all": "~0.1.6",
     "passport": "^0.3.2",
+    "passport-google-oauth2": "^0.1.6",
     "passport-local": "^1.0.0",
     "rc": "1.0.1",
     "sails": "~0.12.3",
@@ -39,6 +40,9 @@
   "author": "sarahallen",
   "license": "",
   "devDependencies": {
-    "sails-memory": "^0.10.6"
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "sails-memory": "^0.10.6",
+    "supertest": "^1.2.0"
   }
 }

@@ -36,6 +36,9 @@ module.exports.routes = {
     view: 'homepage'
   },
 
+  'GET  /auth/google':   {controller: 'AuthController', action: 'provider'},
+  'GET  /auth/:provider/:action':   {controller: 'AuthController', action: 'callback'},
+
   'POST /register': {controller: 'AuthController', action: 'register'},
   'POST /login':    {controller: 'AuthController', action: 'login'},
   'GET  /logout':   {controller: 'AuthController', action: 'logout'}
